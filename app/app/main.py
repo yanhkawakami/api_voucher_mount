@@ -32,7 +32,7 @@ def get_most_used_voucher_value():
                 af = AmountFrequency(total_orders)
                 amount = af.get_amount_by_frequency(country_code, segment_name)
             msg = {
-                "voucher_amount": amount
+                "voucher_amount": int(amount)
             }
             response = jsonify(msg)
             return response
