@@ -7,11 +7,11 @@ class AmountRecency:
         self.ur = UserRecency(last_order_ts, first_order_ts)
         pass
 
-    def filter_amount_recency(self, data, value):
+    def filter_amount_recency(self, data, segment_group):
         """
         Function that filters voucher amount by recency.
         """
-        amount = data.query("recency_segment == @value").loc[
+        amount = data.query("recency_segment == @segment_group").loc[
             :, 'voucher_amount']
         return amount
 
@@ -19,7 +19,7 @@ class AmountRecency:
                               country_code,
                               segment):
         """
-        Function that get amount recommended for that user
+        Function that gets amount recommended for that user
         base on recency.
         """
         # Calculate recency based on order dates
@@ -47,11 +47,11 @@ class AmountFrequency:
         self.uf = UserFrequency(total_orders)
         pass
 
-    def filter_amount_frequency(self, data, value):
+    def filter_amount_frequency(self, data, segment_group):
         """
         Function that filters voucher amount by frequency.
         """
-        amount = data.query("frequency_segment == @value").loc[
+        amount = data.query("frequency_segment == @segment_group").loc[
             :, 'voucher_amount']
         return amount
 
@@ -59,7 +59,7 @@ class AmountFrequency:
                                 country_code,
                                 segment):
         """
-        Function that get amount recommended for that user
+        Function that gets amount recommended for that user
         base on frequency.
         """
         # Get group of frequency of user
