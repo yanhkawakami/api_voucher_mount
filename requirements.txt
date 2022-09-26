@@ -1,2 +1,5 @@
 flask==2.1.3
 flask_cors
+pytest
+pytest-cov
+pandas
