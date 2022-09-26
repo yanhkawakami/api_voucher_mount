@@ -16,7 +16,7 @@ def data_filter(filename, country_code, segment):
     data = data_prep(filename)
     fd = FilterData(data)
     country_data = fd.filter_data_of_country(country_code)
-    valid_values = fd.filter_valid_values(country_data)
+    valid_values = fd.filter_valid_values(country_data, segment)
     amount_by_segment = fd.filter_voucher_amount_by_segment(valid_values,
                                                             segment)
     return amount_by_segment

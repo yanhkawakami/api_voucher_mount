@@ -46,14 +46,16 @@ class DataPrep:
         difference_days = int(difference_days.days)
 
         # Rules of days
-        if difference_days >= 30 and difference_days < 61:
+        if difference_days < 30:
+            return 'N/A'
+        elif difference_days >= 30 and difference_days < 61:
             return "30-60"
         elif difference_days >= 61 and difference_days < 91:
             return "61-90"
         elif difference_days >= 91 and difference_days < 121:
             return "91-120"
         elif difference_days >= 121 and difference_days < 181:
-            return "91-120"
+            return "121-180"
         else:
             return '180+'
 
@@ -92,12 +94,12 @@ class FilterData:
         filtered_data = self.data.query("country_code == @country_code")
         return filtered_data
 
-    def filter_valid_values(self, filtered_data):
+    def filter_valid_values(self, filtered_data, segment_column):
         """
         Function that filters only valid values
         """
         # Removing frequency segment not valid
-        filtered_data = filtered_data[filtered_data.frequency_segment != 'N/A']
+        filtered_data = filtered_data[filtered_data[segment_column] != 'N/A']
         return filtered_data
 
     def filter_voucher_amount_by_segment(self, filtered_data, segment):

@@ -20,8 +20,8 @@ def get_most_used_voucher_value():
         segment_name = json["segment_name"]
 
         # Check if needed fields exists ans if method is working
-        if country_code and last_order_ts and first_order_ts and total_orders\
-                and segment_name and request.method == 'POST':
+        if country_code and last_order_ts and first_order_ts \
+                and total_orders and segment_name:
 
             # Check if it's a recency case
             if segment_name == 'recency_segment':

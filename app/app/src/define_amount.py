@@ -71,7 +71,6 @@ class AmountFrequency:
                 'src/data/content/data.parquet.gzip',
                 country_code,
                 segment)
-
         # Get voucher amount by segment of user
         amount = self.filter_amount_frequency(filtered_data,
                                               user_group_frequency)
