@@ -32,7 +32,7 @@ For lint, I used flake8 to keep my code clean.
 
 1. Open Docker Desktop
 2. Build image while in root directory of project (/data_challenge) with command "docker build . -t dh_image"
-3. Run docker conatainer with image built using command "docker run -it -p 5000:5000 dh_image"
+3. Run docker conatainer with image built using command "docker run -it -p 5000:5000 dh_image" (or "docker run -d -p 5000:5000 dh_image" to keep datached)
 4. Use Insomnia/Postman to call endpoint (http://localhost:5000/most_used_voucher - host can be 127.0.0.1:5000 instead localhost:5000) to get the amount voucher value desired
 
 ```
