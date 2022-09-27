@@ -1,10 +1,11 @@
 # Data Challenge - API Voucher Amount
 
-## 😄 How it was solved
+## 😄 How it was solved and my understanding about the case
 
-The idea was an API with one endpoint using POST method. In backend, I got the most used voucher amount by each segment with historical data (data.parquet) and using user input I to check in which segment of frequency or recency the user was. Based on this, I got user segment and filtered historical data to find the best voucher amount to return in response.
+The idea was to develop an API with one endpoint using POST method. I got the most used voucher amount by each segment using historical data (data.parquet file given by challenge) and using user input I to check in which segment of frequency or recency the user was in. Based on this, I got user segment and filtered historical data to find the best voucher amount to return in response.
 
 To create segments, I used PDF description but for some cases that was not described, I used 'N/A' to mark as invalid values.
+
 
 ## 🚀 Explaining repository and code
 
@@ -17,12 +18,12 @@ Repository is divided by app, env and test folders.
 		* user_data.py: treats user data to get recency and frequency of user
 	* src:
 		* define_amount.py: get amount by recency and frequency based on historical data (data.parquet) and input from API to return best voucher amount for each user
-		* flask_instance.py: flask instance to run a localhost server
 	* main.py: declare route and implements logic to invoke classes for recency or frequency cases
 	* tests: folder with all unit tests
 * env: contains environment files (not used in this project - could be used to configurate flask environment)
 
 For unit testing, I tested all modules only considering success cases (I thought that would be fine for home task). I had problems to deal with integration testing using Flask to check if API was running fine. So I didn't missed out time trying to do it, but I think that would be a relevant test.
+
 
 ## ☕ How to execute the code:
 
@@ -42,3 +43,8 @@ For unit testing, I tested all modules only considering success cases (I thought
 }
 
 ```
+
+
+## 🤝 Suggestions to improve the solution:
+
+To optimize solution, I think storage historical data in a Database to reduce application storage used, decreasing costs with processing. With this POC version, we get all historical data every request, so we can have computing limitations here.

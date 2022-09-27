@@ -13,7 +13,7 @@ def data_prep(filename):
     # Replace NaN in empty string fields
     data = data.replace('', np.nan)
 
-    # Fill NaN values 
+    # Fill NaN values
     data = ld.fill_nan_value(data)
     filled_data = data
 
