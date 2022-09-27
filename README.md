@@ -2,7 +2,7 @@
 
 ## 😄 How it was solved and my understanding about the case
 
-The idea was to develop an API with one endpoint using POST method. I got the most used voucher amount by each segment using historical data (data.parquet file given by challenge) and using user input I to check in which segment of frequency or recency the user was in. Based on this, I got user segment and filtered historical data to find the best voucher amount to return in response.
+The idea was to develop an API with one endpoint using POST method. I got the most used voucher amount by each segment using historical data (data.parquet.gzip) and using user input I to check in which segment of frequency or recency the user was in. Based on this, I got user segment and filtered historical data to find the best voucher amount to return in response.
 
 To create segments, I used PDF description but for some cases that was not described, I used 'N/A' to mark as invalid values.
 
@@ -12,7 +12,7 @@ To create segments, I used PDF description but for some cases that was not descr
 Repository is divided by app, env and test folders. 
 * app: contains the main code and source codes
 	* src/data
-		* content: folder to save data (parquet sent by Delivery Hero team)
+		* content: folder to save data (data.parquet.gzip)
 		* data_orchestration.py: load data and invoke data_transformation module to filter data
 		* data_transform.py: do all data preparation (fill NaN values and create segments considering intervals described in PDF) and filter methods by country code, valid values (filter values that are not in frequency and recency interval described in home task) and return most used voucher amount by segment
 		* user_data.py: treats user data to get recency and frequency of user
