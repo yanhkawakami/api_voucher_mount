@@ -6,6 +6,8 @@ The idea was to develop an API with one endpoint using POST method. I got the mo
 
 To create segments, I used PDF description but for some cases that was not described, I used 'N/A' to mark as invalid values.
 
+To data preparation step, I analyzed three columns (total_orders, last_order_ts and first_order_ts) and blank values in both columns were identified. After this step, I filled these NaN values with empty string and '0' because lately these values would be considered as 'N/A' for segment creation step.
+
 
 ## 🚀 Explaining repository and code
 
