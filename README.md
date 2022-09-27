@@ -26,6 +26,7 @@ Repository is divided by app, env and test folders.
 
 For unit testing, I tested all modules only considering success cases (I thought that would be fine for home task). I had problems to deal with integration testing using Flask to check if API was running fine. So I didn't missed out time trying to do it, but I think that would be a relevant test.
 
+For lint, I used flake8 to keep my code clean.
 
 ## ☕ How to execute the code:
 
