@@ -3,3 +3,5 @@ flask_cors
 pytest
 pytest-cov
 pandas
+pyarrow
+fastparquet
