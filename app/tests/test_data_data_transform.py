@@ -49,8 +49,8 @@ def test_filter_data_of_country():
 
 
 def test_filter_valid_values():
-    r = fd.filter_valid_values(data_filter, 'frequency_segment')
-    assert 'N/A' not in r["frequency_segment"].unique()
+    r = fd.filter_valid_values(data_filter, 'frequent_segment')
+    assert 'N/A' not in r["frequent_segment"].unique()
 
 
 def test_filter_voucher_amount_by_segment():

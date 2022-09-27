@@ -51,7 +51,7 @@ class AmountFrequency:
         """
         Function that filters voucher amount by frequency.
         """
-        amount = data.query("frequency_segment == @segment_group").loc[
+        amount = data.query("frequent_segment == @segment_group").loc[
             :, 'voucher_amount']
         return amount
 

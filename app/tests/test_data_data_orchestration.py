@@ -9,5 +9,5 @@ def test_data_prep():
 
 def test_data_filter():
     r = do.data_filter('tests/test_content/test_data.parquet.gzip',
-                       'Peru', 'frequency_segment')
+                       'Peru', 'frequent_segment')
     assert isinstance(r, pd.DataFrame)

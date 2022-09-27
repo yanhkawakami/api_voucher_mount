@@ -24,5 +24,5 @@ def test_filter_amount_frequency():
 
 
 def test_get_amount_by_frequency():
-    r = af.get_amount_by_frequency("Peru", 'frequency_segment')
+    r = af.get_amount_by_frequency("Peru", 'frequent_segment')
     assert r == 2640.0

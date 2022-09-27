@@ -64,7 +64,7 @@ class DataPrep:
         Function that creates segments on dataframe.
         """
         # Create the frequency segment based on orders
-        data["frequency_segment"] = data["total_orders"].\
+        data["frequent_segment"] = data["total_orders"].\
             apply(self.support_frequency_segment)
 
         # Create difference of days
