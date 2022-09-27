@@ -8,8 +8,7 @@ To create segments, I used PDF description but for some cases that was not descr
 
 ## 🚀 Explaining repository and code
 
-Repository is divided by app and env folders. 
-
+Repository is divided by app, env and test folders. 
 * app: contains the main code and source codes
 	* src/data
 		* content: folder to save data (parquet sent by Delivery Hero team)
@@ -23,11 +22,13 @@ Repository is divided by app and env folders.
 	* tests: folder with all unit tests
 * env: contains environment files (not used in this project - could be used to configurate flask environment)
 
+For unit testing, I tested all modules only considering success cases (I thought that would be fine for home task). I had problems to deal with integration testing using Flask to check if API was running fine. So I didn't missed out time trying to do it, but I think that would be a relevant test.
 
 ## ☕ How to execute the code:
 
-1. Execute app/main.py to establish local server
-2. Use Insomnia/Postman to call endpoint (http://localhost:5000/most_used_voucher) to get the amount value
+1. Open Docker Desktop
+2. Execute app/main.py to establish local server
+3. Use Insomnia/Postman to call endpoint (http://localhost:5000/most_used_voucher) to get the amount value
 
 ```
 {

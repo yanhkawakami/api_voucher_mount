@@ -32,7 +32,7 @@ class AmountRecency:
         # Get data filtered by country code and segment
         filtered_data = \
             data_orchestration.data_filter(
-                'src/data/content/data.parquet.gzip',
+                'app/src/data/content/data.parquet.gzip',
                 country_code,
                 segment)
 
@@ -68,7 +68,7 @@ class AmountFrequency:
         # Get data filtered by country code and segment
         filtered_data = \
             data_orchestration.data_filter(
-                'src/data/content/data.parquet.gzip',
+                'app/src/data/content/data.parquet.gzip',
                 country_code,
                 segment)
         # Get voucher amount by segment of user

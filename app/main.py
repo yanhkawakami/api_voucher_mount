@@ -1,7 +1,13 @@
-from src.flask_instance import app
+from flask import Flask
 from flask import jsonify
 from flask import request
 from src.define_amount import AmountRecency, AmountFrequency
+
+
+app = Flask(__name__)
+app.config['ENV'] = 'development'
+app.config['DEBUG'] = True
+app.config['TESTING'] = True
 
 
 @app.route('/most_used_voucher', methods=['POST'])
