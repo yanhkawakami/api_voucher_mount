@@ -18,7 +18,7 @@ Repository is divided by app, env and test folders.
 		* user_data.py: treats user data to get recency and frequency of user
 	* src:
 		* define_amount.py: get amount by recency and frequency based on historical data (data.parquet) and input from API to return best voucher amount for each user
-	* main.py: declare route and implements logic to invoke classes for recency or frequency cases
+	* main.py: create a flask instance, declare route and implements logic to invoke classes for recency or frequency cases
 	* tests: folder with all unit tests
 * env: contains environment files (not used in this project - could be used to configurate flask environment)
 
