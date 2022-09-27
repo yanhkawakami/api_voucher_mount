@@ -50,4 +50,6 @@ For lint, I used flake8 to keep my code clean.
 
 ## 🤝 Suggestions to improve the solution:
 
-To optimize solution, I think storage historical data in a Database to reduce application storage used, decreasing costs with processing. With this POC version, we get all historical data every request, so we can have computing limitations here.
+To optimize solution, storage historical data in a Database to reduce application storage used would be a good approach, decreasing costs with processing. In this case, we will need to build API and database, so we could use a docker compose to do everything in the same image
+
+With this POC version, we get all historical data every request, so we can have computing limitations here.
